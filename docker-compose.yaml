@@ -24,3 +24,11 @@ services:
     container_name: consulclient01
     hostname: consulclient01
     command: ['tail', '-f', '/dev/null']
+
+  consulclient02:
+    image: consul:1.10
+    volumes:
+      - ./clients/consul02:/etc/consul.d
+    container_name: consulclient02
+    hostname: consulclient02
+    command: ['tail', '-f', '/dev/null']
